@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C8C81021540EC800012E72C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8C81011540EC800012E72C /* UIKit.framework */; };
+		2C8C81041540EC800012E72C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8C81031540EC800012E72C /* Foundation.framework */; };
+		2C8C81061540EC800012E72C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8C81051540EC800012E72C /* CoreGraphics.framework */; };
+		2C8C810C1540EC800012E72C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C8C810A1540EC800012E72C /* InfoPlist.strings */; };
+		2C8C810E1540EC800012E72C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C810D1540EC800012E72C /* main.m */; };
+		2C8C81121540EC800012E72C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C81111540EC800012E72C /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C8C81281540ECDC0012E72C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C8C81211540ECDC0012E72C /* CleverStork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2C8C80E21540EC410012E72C;
+			remoteInfo = CleverStork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C8C80FD1540EC800012E72C /* CleverStorkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleverStorkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8C81011540EC800012E72C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2C8C81031540EC800012E72C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2C8C81051540EC800012E72C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2C8C81091540EC800012E72C /* CleverStorkDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CleverStorkDemo-Info.plist"; sourceTree = "<group>"; };
+		2C8C810B1540EC800012E72C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2C8C810D1540EC800012E72C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C8C810F1540EC800012E72C /* CleverStorkDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CleverStorkDemo-Prefix.pch"; sourceTree = "<group>"; };
+		2C8C81101540EC800012E72C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C8C81111540EC800012E72C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C8C81211540ECDC0012E72C /* CleverStork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CleverStork.xcodeproj; path = "../CleverStork-iOS-Library/CleverStork.xcodeproj"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C8C80FA1540EC800012E72C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8C81021540EC800012E72C /* UIKit.framework in Frameworks */,
+				2C8C81041540EC800012E72C /* Foundation.framework in Frameworks */,
+				2C8C81061540EC800012E72C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C8C80F21540EC800012E72C = {
+			isa = PBXGroup;
+			children = (
+				2C8C81211540ECDC0012E72C /* CleverStork.xcodeproj */,
+				2C8C81071540EC800012E72C /* CleverStorkDemo */,
+				2C8C81001540EC800012E72C /* Frameworks */,
+				2C8C80FE1540EC800012E72C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C8C80FE1540EC800012E72C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C80FD1540EC800012E72C /* CleverStorkDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C8C81001540EC800012E72C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C81011540EC800012E72C /* UIKit.framework */,
+				2C8C81031540EC800012E72C /* Foundation.framework */,
+				2C8C81051540EC800012E72C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C8C81071540EC800012E72C /* CleverStorkDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C81101540EC800012E72C /* AppDelegate.h */,
+				2C8C81111540EC800012E72C /* AppDelegate.m */,
+				2C8C81081540EC800012E72C /* Supporting Files */,
+			);
+			path = CleverStorkDemo;
+			sourceTree = "<group>";
+		};
+		2C8C81081540EC800012E72C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C81091540EC800012E72C /* CleverStorkDemo-Info.plist */,
+				2C8C810A1540EC800012E72C /* InfoPlist.strings */,
+				2C8C810D1540EC800012E72C /* main.m */,
+				2C8C810F1540EC800012E72C /* CleverStorkDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C8C81221540ECDC0012E72C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C81291540ECDC0012E72C /* libCleverStork.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C8C80FC1540EC800012E72C /* CleverStorkDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C8C81151540EC800012E72C /* Build configuration list for PBXNativeTarget "CleverStorkDemo" */;
+			buildPhases = (
+				2C8C80F91540EC800012E72C /* Sources */,
+				2C8C80FA1540EC800012E72C /* Frameworks */,
+				2C8C80FB1540EC800012E72C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CleverStorkDemo;
+			productName = CleverStorkDemo;
+			productReference = 2C8C80FD1540EC800012E72C /* CleverStorkDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C8C80F41540EC800012E72C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = CleverStork;
+			};
+			buildConfigurationList = 2C8C80F71540EC800012E72C /* Build configuration list for PBXProject "CleverStorkDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2C8C80F21540EC800012E72C;
+			productRefGroup = 2C8C80FE1540EC800012E72C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2C8C81221540ECDC0012E72C /* Products */;
+					ProjectRef = 2C8C81211540ECDC0012E72C /* CleverStork.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				2C8C80FC1540EC800012E72C /* CleverStorkDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2C8C81291540ECDC0012E72C /* libCleverStork.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCleverStork.a;
+			remoteRef = 2C8C81281540ECDC0012E72C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C8C80FB1540EC800012E72C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8C810C1540EC800012E72C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C8C80F91540EC800012E72C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8C810E1540EC800012E72C /* main.m in Sources */,
+				2C8C81121540EC800012E72C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C8C810A1540EC800012E72C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C8C810B1540EC800012E72C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C8C81131540EC800012E72C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2C8C81141540EC800012E72C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C8C81161540EC800012E72C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CleverStorkDemo/CleverStorkDemo-Prefix.pch";
+				INFOPLIST_FILE = "CleverStorkDemo/CleverStorkDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2C8C81171540EC800012E72C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CleverStorkDemo/CleverStorkDemo-Prefix.pch";
+				INFOPLIST_FILE = "CleverStorkDemo/CleverStorkDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C8C80F71540EC800012E72C /* Build configuration list for PBXProject "CleverStorkDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8C81131540EC800012E72C /* Debug */,
+				2C8C81141540EC800012E72C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C8C81151540EC800012E72C /* Build configuration list for PBXNativeTarget "CleverStorkDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8C81161540EC800012E72C /* Debug */,
+				2C8C81171540EC800012E72C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C8C80F41540EC800012E72C /* Project object */;
+}
