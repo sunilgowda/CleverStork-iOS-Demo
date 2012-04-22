@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
 
@@ -21,7 +22,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
+
+    MainViewController *controller = [[MainViewController alloc] init];
+    self.window.rootViewController = controller;
+    [controller release];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -55,6 +60,12 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    
+    CleverStork *stork = [[CleverStork alloc] initWithKey:@"531c7a5c9d124384c26e" token:@"507804efabd3bcdf5db9"];
+    if([stork doCheck]) {
+        // ok to continue initialization
+    }
+    [stork release];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

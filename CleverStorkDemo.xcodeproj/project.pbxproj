@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C472097154339F700225731 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C472096154339F700225731 /* MainViewController.m */; };
+		2C47209915433A1200225731 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C47209815433A1200225731 /* MainViewController.xib */; };
+		2C47209D15435EA800225731 /* clever-stork-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C47209A15435EA800225731 /* clever-stork-logo.png */; };
+		2C47209E15435EA800225731 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C47209B15435EA800225731 /* Icon.png */; };
+		2C47209F15435EA800225731 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C47209C15435EA800225731 /* Icon@2x.png */; };
 		2C8C81021540EC800012E72C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8C81011540EC800012E72C /* UIKit.framework */; };
 		2C8C81041540EC800012E72C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8C81031540EC800012E72C /* Foundation.framework */; };
 		2C8C81061540EC800012E72C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8C81051540EC800012E72C /* CoreGraphics.framework */; };
 		2C8C810C1540EC800012E72C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C8C810A1540EC800012E72C /* InfoPlist.strings */; };
 		2C8C810E1540EC800012E72C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C810D1540EC800012E72C /* main.m */; };
 		2C8C81121540EC800012E72C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C81111540EC800012E72C /* AppDelegate.m */; };
+		2C8C814415432C980012E72C /* libCleverStork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8C81291540ECDC0012E72C /* libCleverStork.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,9 +29,22 @@
 			remoteGlobalIDString = 2C8C80E21540EC410012E72C;
 			remoteInfo = CleverStork;
 		};
+		2C8C814215432C7B0012E72C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C8C81211540ECDC0012E72C /* CleverStork.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C8C80E11540EC410012E72C;
+			remoteInfo = CleverStork;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C472095154339F700225731 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		2C472096154339F700225731 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		2C47209815433A1200225731 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = CleverStorkDemo/MainViewController.xib; sourceTree = "<group>"; };
+		2C47209A15435EA800225731 /* clever-stork-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clever-stork-logo.png"; sourceTree = "<group>"; };
+		2C47209B15435EA800225731 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		2C47209C15435EA800225731 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		2C8C80FD1540EC800012E72C /* CleverStorkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleverStorkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8C81011540EC800012E72C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2C8C81031540EC800012E72C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8C814415432C980012E72C /* libCleverStork.a in Frameworks */,
 				2C8C81021540EC800012E72C /* UIKit.framework in Frameworks */,
 				2C8C81041540EC800012E72C /* Foundation.framework in Frameworks */,
 				2C8C81061540EC800012E72C /* CoreGraphics.framework in Frameworks */,
@@ -53,11 +73,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C4720A015435EBA00225731 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C47209815433A1200225731 /* MainViewController.xib */,
+				2C47209A15435EA800225731 /* clever-stork-logo.png */,
+				2C47209B15435EA800225731 /* Icon.png */,
+				2C47209C15435EA800225731 /* Icon@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		2C8C80F21540EC800012E72C = {
 			isa = PBXGroup;
 			children = (
 				2C8C81211540ECDC0012E72C /* CleverStork.xcodeproj */,
 				2C8C81071540EC800012E72C /* CleverStorkDemo */,
+				2C4720A015435EBA00225731 /* Resources */,
 				2C8C81001540EC800012E72C /* Frameworks */,
 				2C8C80FE1540EC800012E72C /* Products */,
 			);
@@ -87,6 +119,8 @@
 				2C8C81101540EC800012E72C /* AppDelegate.h */,
 				2C8C81111540EC800012E72C /* AppDelegate.m */,
 				2C8C81081540EC800012E72C /* Supporting Files */,
+				2C472095154339F700225731 /* MainViewController.h */,
+				2C472096154339F700225731 /* MainViewController.m */,
 			);
 			path = CleverStorkDemo;
 			sourceTree = "<group>";
@@ -124,6 +158,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2C8C814315432C7B0012E72C /* PBXTargetDependency */,
 			);
 			name = CleverStorkDemo;
 			productName = CleverStorkDemo;
@@ -178,6 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8C810C1540EC800012E72C /* InfoPlist.strings in Resources */,
+				2C47209915433A1200225731 /* MainViewController.xib in Resources */,
+				2C47209D15435EA800225731 /* clever-stork-logo.png in Resources */,
+				2C47209E15435EA800225731 /* Icon.png in Resources */,
+				2C47209F15435EA800225731 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,10 +229,19 @@
 			files = (
 				2C8C810E1540EC800012E72C /* main.m in Sources */,
 				2C8C81121540EC800012E72C /* AppDelegate.m in Sources */,
+				2C472097154339F700225731 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C8C814315432C7B0012E72C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CleverStork;
+			targetProxy = 2C8C814215432C7B0012E72C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2C8C810A1540EC800012E72C /* InfoPlist.strings */ = {
@@ -228,6 +276,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../CleverStork-iOS-Library/**";
 			};
 			name = Debug;
 		};
@@ -246,6 +295,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../CleverStork-iOS-Library/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
