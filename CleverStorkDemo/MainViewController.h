@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CleverStork.h"
 
-@interface MainViewController : UIViewController<UITableViewDataSource> {
+@interface MainViewController : UIViewController<UITableViewDataSource, CleverStorkDelegate> {
     UIButton *startButton;
     UISwitch *autoRepeat;
     UITableView *appInfoTable;
     NSArray *keys;
     NSArray *values;
+    NSDate *start;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *startButton;

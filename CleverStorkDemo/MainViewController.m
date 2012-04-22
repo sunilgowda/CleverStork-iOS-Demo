@@ -7,7 +7,6 @@
 //
 
 #import "MainViewController.h"
-#import "CleverStork.h"
 
 @implementation MainViewController
 
@@ -55,30 +54,47 @@
 }
 
 -(IBAction) startButtonTapped:(id)sender {
+    start = [[NSDate date] retain];
+    startButton.enabled = NO;
     
-    NSDate *start = [NSDate date];
     CleverStork *stork = [[CleverStork alloc] initWithKey:@"531c7a5c9d124384c26e" token:@"507804efabd3bcdf5db9"];
-    [stork doCheck];
-    
-    NSDate *end = [NSDate date];
-    NSTimeInterval duration = [end timeIntervalSinceDate:start];
-    
-    values = [NSArray arrayWithObjects:
-                        [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"], 
-                        stork.latestVersion, 
-                        stork.latestVersionDescription, 
-                        stork.minimumVersion, 
-                        stork.updateRequiredMessage, 
-                        [self storkStatusString:stork.status], 
-                        [NSString stringWithFormat:@"%.0f milliseconds", duration * 1000.0f], 
-                    nil];
-    [values retain];
-    [appInfoTable reloadData];
-    [stork release];
+    [stork doCheckWithDelegate:self];
 }
 
 #pragma mark -
-                 
+        
+#pragma mark CleverStorkDelegate methods
+
+-(void) cleverStork:(CleverStork *)stork didCompleteCheck:(CleverStorkStatus)status {
+    NSDate *end = [NSDate date];
+    NSTimeInterval duration = [end timeIntervalSinceDate:start];
+    [start release];
+    start = nil;
+
+    // release previous values (if we are in benchmark mode)
+    [values release];
+    values = [NSArray arrayWithObjects:
+              [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"], 
+              stork.latestVersion, 
+              stork.latestVersionDescription, 
+              stork.minimumVersion, 
+              stork.updateRequiredMessage, 
+              [self storkStatusString:stork.status], 
+              [NSString stringWithFormat:@"%.0f milliseconds", duration * 1000.0f], 
+              nil];
+    [values retain];
+    [appInfoTable reloadData];
+    startButton.enabled = YES;
+    [stork release];
+}
+
+-(void) cleverStork:(CleverStork *)stork didAcceptUpdateOption:(_Bool)doUpdate {
+    
+}
+
+#pragma mark -
+
+#pragma mark UITableViewDataSource methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [values count];
@@ -99,5 +115,7 @@
     
     return cell;
 }
+
+#pragma mark -
 
 @end
