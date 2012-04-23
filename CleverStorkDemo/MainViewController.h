@@ -15,7 +15,8 @@
     UITableView *appInfoTable;
     NSArray *keys;
     NSArray *values;
-    NSDate *start;
+    int numChecks;
+    float avgCheckTime;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *startButton;
