@@ -103,10 +103,10 @@
     [values release];
     values = [NSArray arrayWithObjects:
               [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"], 
-              stork.latestVersion, 
-              stork.latestVersionDescription, 
-              stork.minimumVersion, 
-              stork.updateRequiredMessage, 
+              stork.latestVersion != nil? stork.latestVersion : @"", 
+              stork.latestVersionDescription != nil? stork.latestVersionDescription : @"", 
+              stork.minimumVersion != nil ? stork.minimumVersion : @"", 
+              stork.updateRequiredMessage != nil? stork.updateRequiredMessage : @"", 
               [self storkStatusString:stork.status], 
               [NSString stringWithFormat:@"%.0f milliseconds (avg=%.0f)", duration * 1000.0f, avgCheckTime * 1000.0f], 
               nil];
