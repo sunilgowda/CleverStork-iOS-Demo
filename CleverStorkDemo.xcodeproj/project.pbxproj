@@ -171,7 +171,7 @@
 		2C8C80F41540EC800012E72C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = CleverStork;
 			};
 			buildConfigurationList = 2C8C80F71540EC800012E72C /* Build configuration list for PBXProject "CleverStorkDemo" */;
@@ -260,6 +260,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sunil Gowda (X9D5T7256X)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -275,6 +276,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PROVISIONING_PROFILE = "E6D6B4BA-4F52-492C-8B58-36FD998128BB";
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "../CleverStork-iOS-Library/**";
 			};

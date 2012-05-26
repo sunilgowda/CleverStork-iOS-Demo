@@ -61,7 +61,7 @@
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
     
-    CleverStork *stork = [[CleverStork alloc] initWithKey:@"531c7a5c9d124384c26e" token:@"507804efabd3bcdf5db9"];
+    CleverStork *stork = [[CleverStork alloc] initWithKey:@"4d4a3887caa7853da324" token:@"a64e06a0d6e736d5cbbc"];
     if([stork doCheck]) {
         // ok to continue initialization
     }

@@ -14,7 +14,7 @@
 
 -(id) init {
     if( self = [super initWithNibName:@"MainViewController" bundle:nil] ) {
-        keys = [[NSArray arrayWithObjects:@"Current Version", @"Latest Version", @"Update Available Message", @"Minimum Version", @"Update Required Message", @"Status", @"Time", nil] retain];
+        keys = [[NSArray arrayWithObjects:@"Status", @"Current Version", @"Latest Version", @"Update Available Message", @"Minimum Version", @"Update Required Message", @"Time", nil] retain];
     }
     return self;
 }
@@ -70,10 +70,14 @@
         startButton.selected = NO;
         [startButton setTitle:@"Check version" forState:UIControlStateNormal];
     } else if(autoRepeat.on) {
+        if(!startButton.selected) {
+            avgCheckTime = 0.0;
+            numChecks = 0;
+        }
         startButton.selected = YES;
     }
     
-    CleverStork *stork = [[CleverStork alloc] initWithKey:@"531c7a5c9d124384c26e" token:@"507804efabd3bcdf5db9"];
+    CleverStork *stork = [[CleverStork alloc] initWithKey:@"4d4a3887caa7853da324" token:@"a64e06a0d6e736d5cbbc"];
     [stork doCheckWithDelegate:self];
     
     
@@ -102,13 +106,13 @@
     // release previous values if we are in benchmark (auto-repeat) mode
     [values release];
     values = [NSArray arrayWithObjects:
+              [self storkStatusString:stork.status], 
               [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"], 
               stork.latestVersion != nil? stork.latestVersion : @"", 
               stork.latestVersionDescription != nil? stork.latestVersionDescription : @"", 
               stork.minimumVersion != nil ? stork.minimumVersion : @"", 
               stork.updateRequiredMessage != nil? stork.updateRequiredMessage : @"", 
-              [self storkStatusString:stork.status], 
-              [NSString stringWithFormat:@"%.0f milliseconds (avg=%.0f)", duration * 1000.0f, avgCheckTime * 1000.0f], 
+              [NSString stringWithFormat:@"%.0f milliseconds (avg=%.1fms over %d req)", duration * 1000.0f, avgCheckTime * 1000.0f, numChecks], 
               nil];
     [values retain];
     
