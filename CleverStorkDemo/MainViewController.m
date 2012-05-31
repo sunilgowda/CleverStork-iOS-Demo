@@ -14,7 +14,7 @@
 
 -(id) init {
     if( self = [super initWithNibName:@"MainViewController" bundle:nil] ) {
-        keys = [[NSArray arrayWithObjects:@"Status", @"Current Version", @"Latest Version", @"Update Available Message", @"Minimum Version", @"Update Required Message", @"Time", nil] retain];
+        keys = [[NSArray arrayWithObjects:@"Status", @"Current Version", @"Latest Version", @"Update Available Message", @"What's New", @"Minimum Version", @"Update Required Message", @"Time", nil] retain];
     }
     return self;
 }
@@ -109,7 +109,8 @@
               [self storkStatusString:stork.status], 
               [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"], 
               stork.latestVersion != nil? stork.latestVersion : @"", 
-              stork.latestVersionDescription != nil? stork.latestVersionDescription : @"", 
+              stork.updateAvailableMessage != nil? stork.updateAvailableMessage : @"", 
+              stork.newVersionDescriptionMessage != nil? stork.newVersionDescriptionMessage : @"",
               stork.minimumVersion != nil ? stork.minimumVersion : @"", 
               stork.updateRequiredMessage != nil? stork.updateRequiredMessage : @"", 
               [NSString stringWithFormat:@"%.0f milliseconds (avg=%.1fms over %d req)", duration * 1000.0f, avgCheckTime * 1000.0f, numChecks], 
