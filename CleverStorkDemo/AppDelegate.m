@@ -65,7 +65,7 @@
     if([stork doCheck]) {
         // ok to continue initialization
     }
-    [stork release];
+    //[stork release]; if you do not have ARC enabled
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
