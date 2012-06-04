@@ -18,7 +18,7 @@
 		2C8C810C1540EC800012E72C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C8C810A1540EC800012E72C /* InfoPlist.strings */; };
 		2C8C810E1540EC800012E72C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C810D1540EC800012E72C /* main.m */; };
 		2C8C81121540EC800012E72C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C81111540EC800012E72C /* AppDelegate.m */; };
-		2CCE34241577C02500EB5D78 /* CleverStork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCE34231577C02500EB5D78 /* CleverStork.framework */; };
+		2CCE342C157D6E8D00EB5D78 /* CleverStork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCE342B157D6E8D00EB5D78 /* CleverStork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,7 @@
 		2C8C810F1540EC800012E72C /* CleverStorkDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CleverStorkDemo-Prefix.pch"; sourceTree = "<group>"; };
 		2C8C81101540EC800012E72C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C8C81111540EC800012E72C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2CCE34231577C02500EB5D78 /* CleverStork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CleverStork.framework; sourceTree = "<group>"; };
+		2CCE342B157D6E8D00EB5D78 /* CleverStork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CleverStork.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 				2C8C81021540EC800012E72C /* UIKit.framework in Frameworks */,
 				2C8C81041540EC800012E72C /* Foundation.framework in Frameworks */,
 				2C8C81061540EC800012E72C /* CoreGraphics.framework in Frameworks */,
-				2CCE34241577C02500EB5D78 /* CleverStork.framework in Frameworks */,
+				2CCE342C157D6E8D00EB5D78 /* CleverStork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 		2C8C81001540EC800012E72C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2CCE34231577C02500EB5D78 /* CleverStork.framework */,
+				2CCE342B157D6E8D00EB5D78 /* CleverStork.framework */,
 				2C8C81011540EC800012E72C /* UIKit.framework */,
 				2C8C81031540EC800012E72C /* Foundation.framework */,
 				2C8C81051540EC800012E72C /* CoreGraphics.framework */,
