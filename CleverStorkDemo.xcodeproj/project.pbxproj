@@ -18,6 +18,8 @@
 		2C8C810C1540EC800012E72C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C8C810A1540EC800012E72C /* InfoPlist.strings */; };
 		2C8C810E1540EC800012E72C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C810D1540EC800012E72C /* main.m */; };
 		2C8C81121540EC800012E72C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C81111540EC800012E72C /* AppDelegate.m */; };
+		2CA51B62157D69770043C967 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA51B60157D69770043C967 /* Default.png */; };
+		2CA51B63157D69770043C967 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA51B61157D69770043C967 /* Default@2x.png */; };
 		2CCE34241577C02500EB5D78 /* CleverStork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCE34231577C02500EB5D78 /* CleverStork.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		2C8C810F1540EC800012E72C /* CleverStorkDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CleverStorkDemo-Prefix.pch"; sourceTree = "<group>"; };
 		2C8C81101540EC800012E72C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C8C81111540EC800012E72C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2CA51B60157D69770043C967 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2CA51B61157D69770043C967 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2CCE34231577C02500EB5D78 /* CleverStork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CleverStork.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +63,8 @@
 		2C4720A015435EBA00225731 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2CA51B60157D69770043C967 /* Default.png */,
+				2CA51B61157D69770043C967 /* Default@2x.png */,
 				2C47209815433A1200225731 /* MainViewController.xib */,
 				2C47209A15435EA800225731 /* clever-stork-logo.png */,
 				2C47209B15435EA800225731 /* Icon.png */,
@@ -175,6 +181,8 @@
 				2C47209D15435EA800225731 /* clever-stork-logo.png in Resources */,
 				2C47209E15435EA800225731 /* Icon.png in Resources */,
 				2C47209F15435EA800225731 /* Icon@2x.png in Resources */,
+				2CA51B62157D69770043C967 /* Default.png in Resources */,
+				2CA51B63157D69770043C967 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +236,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PROVISIONING_PROFILE = "E6D6B4BA-4F52-492C-8B58-36FD998128BB";
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "../CleverStork-iOS-Library/**";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -247,7 +255,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "../CleverStork-iOS-Library/**";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CleverStork.h"
+#import <CleverStork/CleverStork.h>
 
 @interface MainViewController : UIViewController<UITableViewDataSource, CleverStorkDelegate> {
     UIButton *startButton;

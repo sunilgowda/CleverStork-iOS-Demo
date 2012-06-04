@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CleverStork.h"
+#import <CleverStork/CleverStork.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
