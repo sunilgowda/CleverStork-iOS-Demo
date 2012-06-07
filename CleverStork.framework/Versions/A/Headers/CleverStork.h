@@ -15,9 +15,9 @@
 // to newer versions of the app. The utility communicates with the 
 // CleverStork server to fetch details on the latest version of the app. 
 //
-// You will also need an app key and token  to perform the check. 
+// You will also need an app key and token to perform the check. 
 //
-// You can manage your app details and obtain the app key and token at
+// You can manage your app's details and obtain the app key and token at
 //
 //                        www.cleverstork.com.
 // 
@@ -50,7 +50,7 @@ typedef enum {
     NSMutableData *_data;
     NSDate *_start;
     BOOL _deleted; // permanently disable the check - contact us at support@cleverstork.com 
-    BOOL showNewVersionDescription;
+    BOOL showPostUpdateMessage;
 }
 
 // Result of the app version check
@@ -59,26 +59,22 @@ typedef enum {
 
 // The latest version of the app
 @property (nonatomic, readonly) NSString *latestVersion;
-// What's new in the latest app version
-@property (nonatomic, readonly) NSString *latestVersionDescription;
-// The message displayed to the user when a newer version is available (a friendly wrapper around latestVersionDescription)
-@property (nonatomic, readonly) NSString *updateAvailableMessage;
+// The message displayed to the user when a newer version is available
+@property (nonatomic, readonly) NSString *preUpdateMessage;
+// The message displayed to the user once a new version is installed
+@property (nonatomic, readonly) NSString *postUpdateMessage;
+// enable or disable displaying the postUpdatemessage alert
+@property (nonatomic, assign) BOOL showPostUpdateMessage; // default YES
 
 
-// The minimum required versionf of the app
+// The minimum required version of the app
 @property (nonatomic, readonly) NSString *minimumVersion;
-// The update message to be displayed to the user 
+// The update message displayed to the user 
 // when the installed version is older than the minimum version.
 @property (nonatomic, readonly) NSString *updateRequiredMessage;
 
 
-// enable or disable displaying an alert the first time an updated app is launched describing the new features
-@property (nonatomic, assign) BOOL showNewVersionDescription; // default YES
-// The message displayed to the user the first time the app is launched after an update ( a friendly wrapper around latestVersionDescription)
-@property (nonatomic, readonly) NSString *newVersionDescriptionMessage;
-
-
-// The timeout value for the status check. Default is 1s.
+// The timeout value for the status check. Default is one second.
 // If the request times out, the app status is optimistically
 // marked as Current and checkFailed is set to true.
 // It is up to the app developer to take any action if
@@ -109,26 +105,26 @@ typedef enum {
 // Depending on the result of the check, an alert may be displayed to the user as described below.
 //
 // If an update is "required" (installed version older than minimum version),
-// an alert is displayed with the update message (configured as 'update message' on cleverstork.com)
-// and a single "Update" button.
-// On tapping the Update button, the configured update url is opened (typically to the AppStore app). 
+// an alert is displayed with the update message (configured as 'update message'at the app level on cleverstork.com)
+// along with a single "Update" button.
+// On tapping the Update button, the configured update url is opened (typically to the AppStore). 
 //
 // If an update is "available" but not required (installed version matches or 
 // newer than minimum version), an alert is displayed with the 
-// latest app version's description (configured as 'what's new' on cleverstork.com) 
-// with  three buttons - "Install Update", "Remind Me Later" and "Ignore"
-// If the user opts to install the update, the configured update url is opened (typically to the AppStore app). 
+// latest app version's description (configured as 'pre-update message' at the version level on cleverstork.com) 
+// along with  three buttons - "Install Update", "Remind Me Later" and "Ignore"
+// If the user opts to install the update, the configured update url is opened (typically to the AppStore). 
 // if the user opts to be reminded later, nothing happens and the method returns. The same check is triggered on next launch.
 // If the user opts to Ignore this update, subsequent checks return the status as csCurrent until the current version value is updated on cleverstork.com
 //
 // If this is the first launch after a newer version of the app has been installed,
-// an alert is displayed with the new version's description (configured as 'what's new on cleverstork.com)
-// with a single "OK" button. This can be disabled by setting showNewVersionDescription to NO
+// an alert is displayed with the new version's description (configured as 'post-update message' at the version level on cleverstork.com)
+// with a single "OK" button. This can be disabled by setting showPostUpdateMessage to NO
 //
 // Note that in all cases, the method returns before the alert is presented. 
 // The method returns YES if the app meets the minimum version criteria. 
 // The method returns NO if the app is older than the minimum version required.
-// Typically, the app should continue initialization only if the method return YES.
+// Typically, the app should continue initialization only if this method returns YES.
 -(BOOL) doCheck; 
 
 
@@ -149,7 +145,7 @@ typedef enum {
 // If an update is required or available, you can invoke presentUpdateOptions to present
 // an alert to the user with the appropriate message. 
 // You can also present these messages to the user in your custom UI. The strings are available 
-// as updateAvailableMessage and updateRequiredMessage properties.
+// as preUpdateMessage and updateRequiredMessage properties.
 //
 // The delegate (optional) is not retained. The delegate is not required if you opt 
 // to wait on the condition.
@@ -166,8 +162,8 @@ typedef enum {
 //
 // If an update is "available" but not required (installed version matches or 
 // newer than minimum version), an alert is displayed with the 
-// latest app version's description (configured as 'what's new' on cleverstork.com) with  
-// "Install Update", "Remind Me Later" and "Ingore" buttons
+// latest app version's description (configured as 'pre-update message' on cleverstork.com) 
+// with three buttons: "Install Update", "Remind Me Later" and "Ingore" buttons
 // If the user opts to install the update, the configured update url is opened. 
 // if the user opts to be reminded later, nothing happens and the method returns. The same check is triggered on next launch.
 // If the user opts to Ignore this update, subsequent checks return the status as csCurrent until the current version value is updated on cleverstork.com
@@ -178,22 +174,22 @@ typedef enum {
 // Note that in all cases, the method returns before the alert is presented. 
 // The method returns YES if the app meets the minimum version criteria. 
 // The method returns NO if the app is older than the minimum version required.
-// Typically, the app should continue initialization only if the method return YES.
+// Typically, the app should continue initialization only if the method returns YES.
 // 
 -(BOOL) presentUpdateOptionsWithDelegate:(id<CleverStorkDelegate>)delegate;
 
 
 // Method to trigger opening the update url if you presented the update messages
 // within your custom UI (did NOT use presentUpdateOptionsWithDelegate:)  
-// Note: When you present the update messages within your own custom UI, please adhere 
-// to the same message determination rules as described earlier. 
+// Note: When you present the update messages within your own custom UI, it is recommended that 
+// same message determination rules as described earlier are applied. 
 -(void) doUpdate;
 
-// Method to display an alert with the new version's description (configured as 'what's new on cleverstork.com)
+// Method to display an alert with the new version's description (configured as 'post-update message' on cleverstork.com)
 // and a single "OK" button.
-// If showNewVersionDescription is set to NO or if the latest version's message has
+// If showPostUpdateMessage is set to NO or if the latest version's message has
 // already been displayed once, the method simply returns.
--(void) checkAndShowNewVersionDescription;
+-(void) checkAndShowPostUpdateMessage;
 
 @end
 
